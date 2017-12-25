@@ -1,0 +1,50 @@
+header {
+  color: #61BEFF;
+  font-size: 72px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #3333FF;
+}
+
+button {
+  background-color: #9FDCBB;
+  border-radius: 4px;
+  height: 50px;
+  width: 80px;
+
+}
+
+button:hover {
+  box-shadow: 2px 2px 1px #666666;
+}
+
+th {
+  background-color: #B5DDDD;
+  border: 3px solid black;
+  border-radius: 4px;
+  font-size: 28px;
+  padding: 10px;
+  text-align: right;
+}
+
+table {
+  background-color: #61BEFF;
+  border: 4px solid #CCCCCC;
+  border-radius: 10px;
+  box-shadow: 5px 5px 200px 3px #3333FF;
+  left: 37.5%;
+  padding: 5px;
+  position: absolute;
+  top: 25%;
+}
+
+td {
+  padding: 3px;
+}
+
+body {
+  background-color: black;
+}
+
+.btn {
+  width: 167px;
+}
