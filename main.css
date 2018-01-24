@@ -5,6 +5,13 @@ header {
   text-shadow: 2px 2px 2px #3333FF;
 }
 
+h1 {
+  color: #61BEFF;
+  font-size: 32px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #3333FF;
+}
+
 button {
   background-color: #9FDCBB;
   border-radius: 4px;
@@ -34,7 +41,7 @@ table {
   left: 37.5%;
   padding: 5px;
   position: absolute;
-  top: 25%;
+  top: 30%;
 }
 
 td {
@@ -42,7 +49,7 @@ td {
 }
 
 body {
-  background-color: black;
+  background-color: #000;
 }
 
 .btn {

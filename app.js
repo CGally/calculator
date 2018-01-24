@@ -1,21 +1,4 @@
 function onReady() {
-  const numb = document.getElementsByClassName('numb');
-  const one = document.getElementById('1');
-  const two = document.getElementById('2');
-  const three = document.getElementById('3');
-  const four = document.getElementById('4');
-  const five = document.getElementById('5');
-  const six = document.getElementById('6');
-  const seven = document.getElementById('7');
-  const eight = document.getElementById('8');
-  const nine = document.getElementById('9');
-  const zero = document.getElementById('0');
-  const decimal = document.getElementById('dec');
-  const add = document.getElementById('plus');
-  const subtract = document.getElementById('minus');
-  const multiply = document.getElementById('times');
-  const divide = document.getElementById('divide');
-  const expo = document.getElementById('expo');
   const root = document.getElementById('root');
   const equals = document.getElementById('equal');
   const results = document.getElementById('results');
@@ -121,89 +104,48 @@ function onReady() {
     }
   }
 
-  one.addEventListener('click', event => {
-    setNumbers('1');
-  });
-
-  two.addEventListener('click', event => {
-    setNumbers('2');
-  });
-
-  three.addEventListener('click', event => {
-    setNumbers('3');
-  });
-
-  four.addEventListener('click', event => {
-    setNumbers('4');
-  });
-
-  five.addEventListener('click', event => {
-    setNumbers('5');
-  });
-
-  six.addEventListener('click', event => {
-    setNumbers('6');
-  });
-
-  seven.addEventListener('click', event => {
-    setNumbers('7');
-  });
-
-  eight.addEventListener('click', event => {
-    setNumbers('8');
-  });
-
-  nine.addEventListener('click', event => {
-    setNumbers('9');
-  });
-
-  zero.addEventListener('click', event => {
-    setNumbers('0');
-  });
-
-  dec.addEventListener('click', event => {
-    setNumbers('.');
-  });
-
-  add.addEventListener('click', event => {
-    oper = '+';
-    if(typeof num2 === 'string') {
-      equate();
-      oper = '+';
-    }
-  });
-
-  subtract.addEventListener('click', event => {
-      oper = '-';
-      if(typeof num2 === 'string') {
-        equate();
-        oper = '-';
-      }
-  });
-
-  multiply.addEventListener('click', event => {
-      oper = '*';
-      if(typeof num2 === 'string') {
-        equate();
-        oper = '*';
-      }
-  });
-
-  divide.addEventListener('click', event => {
-      oper = '/';
-      if(typeof num2 === 'string') {
-        equate();
-        oper = '/';
-      }
-  });
-
-  expo.addEventListener('click', event => {
-      oper = '^';
-      if(typeof num2 === 'string') {
-        equate();
-        oper = '^';
-      }
-  });
+  for(var btnNum = 0; btnNum < 16; btnNum++) {
+    (function(btnNum) {
+      const number = document.getElementById(String(btnNum));
+      number.addEventListener('click', event => {
+        if(btnNum < 10) {
+          setNumbers(String(btnNum));
+        } else if(btnNum === 10){
+          setNumbers('.');
+        } else if(btnNum === 11) {
+          oper = '+';
+          if(typeof num2 === 'string') {
+            equate();
+            oper = '+';
+          }
+        } else if(btnNum === 12) {
+          oper = '-';
+          if(typeof num2 === 'string') {
+            equate();
+            oper = '-';
+          }
+        } else if(btnNum === 13) {
+          oper = '*';
+          if(typeof num2 === 'string') {
+            equate();
+            oper = '*';
+          }
+        } else if(btnNum === 14) {
+          oper = '/';
+          if(typeof num2 === 'string') {
+            equate();
+            oper = '/';
+          }
+        } else {
+          oper = '^';
+          if(typeof num2 === 'string') {
+            equate();
+            oper = '^';
+          }
+        }
+      });
+    })(btnNum);
+  };
 
   root.addEventListener('click', event => {
       num3 = undefined;
